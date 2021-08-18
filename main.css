@@ -1,18 +1,140 @@
+.menu-btn {
+  position: relative;
+}
+
 .menu-btn a {
   padding: 1rem;
 }
 
-.menu-btn a:hover {
-  position: relative;
-  color: #6b0054;
-  font-size: 18px;
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+.menu-btn.close {
+  z-index: 3;
 }
 
 .menu-btn.close a {
-  -webkit-transition: all 0.125s ease-in;
-  transition: all 0.125s ease-in;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  visibility: hidden;
+}
+
+.menu .show {
+  visibility: visible;
+}
+
+.menu-branding, .menu-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  float: left;
+  height: 100vh;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu-nav {
+  margin: 0;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: -1;
+  list-style: none;
+  -webkit-transform: translate3d(0, -100%, 0);
+          transform: translate3d(0, -100%, 0);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-nav li:first-child a {
+  color: #ebca11;
+}
+
+.menu .show {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.menu-branding {
+  background: rgba(0, 0, 0, 0.9);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: translate3d(0, 100%, 0);
+          transform: translate3d(0, 100%, 0);
+}
+
+.menu-branding .show {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.menu-branding .portrait {
+  width: 240px;
+  height: 250px;
+  background: url("sanii.PNG");
+  border-radius: 50%;
+  border: solid 3px #ebca11;
+}
+
+.menu .nav-items {
+  -webkit-transform: translate3d(600px, 0, 0);
+          transform: translate3d(600px, 0, 0);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu .nav-items.show {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.menu .nav-link {
+  display: inline-block;
+  padding: 1rem 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  font-weight: 400;
+  color: white;
+  text-transform: uppercase;
+  position: relative;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.menu .nav-link:hover {
+  color: #ebca11;
+}
+
+.nav-items:nth-child(1) {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.nav-items:nth-child(2) {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.nav-items:nth-child(3) {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.nav-items:nth-child(4) {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
 }
 
 * {

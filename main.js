@@ -4,8 +4,8 @@ const menu=document.querySelector('.menu');
 const menunav=document.querySelector('.menu-nav');
 const menuBranding=document.querySelector('.menu-branding');
 const navItems=document.querySelectorAll('.nav-items');
-const link=document.getElementById(icon1);
-link.addEventListener('click',change);
+
+
 //initial state of menu
 let showmenu=false;
 menuBTN.addEventListener('click',toggleMenu);
@@ -30,12 +30,6 @@ function toggleMenu()
     }
 }
 
-function change (icon1){
-    if(document.getElementById(icon1).className=="fas fa-bars fa-2x"){
-      document.getElementById(icon1).className = "fas fa-times fa-2x";
-    }else{
-      document.getElementById(icon1).className = "fas fa-bars fa-2x";
-    }
-  }
+
 
 
