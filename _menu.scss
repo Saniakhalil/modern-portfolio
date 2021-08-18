@@ -1,0 +1,30 @@
+.menu-btn
+{
+   
+    a
+    {
+        padding: 1rem;
+        &:hover{
+       
+            position: relative;
+            color: rgb(107, 0, 84);
+            font-size: 18px;
+            transform: scale(1.5);
+        
+       }
+        
+      
+    
+    }
+    &.close
+    {
+       
+       a
+       {
+        transition: all 0.125s ease-in;
+      
+       }
+
+    }
+    
+}

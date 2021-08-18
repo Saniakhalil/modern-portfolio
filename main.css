@@ -1,3 +1,20 @@
+.menu-btn a {
+  padding: 1rem;
+}
+
+.menu-btn a:hover {
+  position: relative;
+  color: #6b0054;
+  font-size: 18px;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.menu-btn.close a {
+  -webkit-transition: all 0.125s ease-in;
+  transition: all 0.125s ease-in;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
