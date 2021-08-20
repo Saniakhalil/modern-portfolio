@@ -106,7 +106,7 @@ display: inline-block;
 padding: 1rem 0;
 @include ease-in-out;
 font-weight: 400;
-color:white;
+color:set-text-color($primary-color);
 text-transform: uppercase;
 position: relative;
 text-decoration: none;
