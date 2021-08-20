@@ -58,10 +58,6 @@
   transition: all 0.5s ease-in-out;
 }
 
-.menu-nav li:first-child a {
-  color: gold;
-}
-
 .menu .show {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
@@ -98,6 +94,10 @@
 .menu .nav-items.show {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
+}
+
+.menu .nav-items.current > a {
+  color: gold;
 }
 
 .menu .nav-link {
@@ -277,6 +277,48 @@ main#home h1 {
   border-bottom: gold 5px solid;
 }
 
+.projects {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.7rem;
+}
+
+.projects img {
+  width: 100%;
+  border: 3px solid white;
+}
+
+.projects img:hover {
+  opacity: 0.5;
+  border-color: gold;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: none;
+  margin-bottom: 0.3rem;
+}
+
+.btn:hover, .btn-dark:hover, .btn-light:hover {
+  background: gold;
+  color: #000;
+}
+
+.btn-dark {
+  background: #0d0d0d;
+  color: white;
+}
+
+.btn-light {
+  background: #666666;
+  color: black;
+}
+
 #main-footer {
   text-align: center;
   padding: 1rem;
@@ -289,9 +331,17 @@ main#home h1 {
   main#home h1 {
     margin-top: 10vh;
   }
+  .projects {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .projects {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
   main {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -338,6 +388,20 @@ main#home h1 {
         align-self: center;
     -ms-grid-column-align: center;
         justify-self: center;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1171px) {
+  .projects {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -57,9 +57,7 @@ align-items: center;
      list-style: none;
      transform: translate3d(0,-100%,0);
      @include ease-in-out;
-     & li:first-child a{
-        color: $secondary-color;
-     }
+    
    
  }
 
@@ -94,6 +92,10 @@ align-items: center;
      &.show{
 
         transform:translate3d(0,0,0);
+    }
+    &.current>a
+    {
+        color: gold;
     }
   
 
